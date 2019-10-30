@@ -4,6 +4,8 @@ const massive = require('massive')
 const session = require('express-session')
 const {CONNECTION_STRING,SERVER_PORT, SESSION_SECRET} = process.env
 const app = express()
+const authCtrl = require('./controllers/authController')
+const mainCtrl = require('./controllers/mainController')
 
 app.use(express.json())
 
@@ -20,5 +22,9 @@ massive(CONNECTION_STRING).then(db => {
 })
 
 const port = SERVER_PORT
+
+// Auth Endpoints
+
+// Main Endpoints
 
 app.listen(port, () => {console.log(`Server running on port: ${port}`)})
