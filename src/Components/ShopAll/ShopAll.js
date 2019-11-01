@@ -38,9 +38,9 @@ componentDidMount = () => {
                         We all know candles are the original joy-sparkers. We have fragrences for you, your mom & your son's second-grade teacher so get to shopping!
                         <br/>
                         <div id="social-container">
-                            <i class="fab fa-instagram"></i>
-                            <i class="fab fa-facebook-square"></i>
-                            <i class="fab fa-pinterest"></i>
+                            <i className="fab fa-instagram"></i>
+                            <i className="fab fa-facebook-square"></i>
+                            <i className="fab fa-pinterest"></i>
                         </div>
                         
 

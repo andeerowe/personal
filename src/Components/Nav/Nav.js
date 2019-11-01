@@ -16,7 +16,7 @@ class Nav extends Component{
                 <div className="top-nav-container">
                     
                         <div className="logo-container">
-                    <Link to="/"><img id="top-logo" src="https://coventry-candles.s3.us-east-2.amazonaws.com/Coventry.png"></img> </Link> 
+                    <Link to="/"><img id="top-logo" src="https://coventry-candles.s3.us-east-2.amazonaws.com/Coventry.png" alt="logo"></img> </Link> 
                         </div>
                     
                     <div className="right-side-container">

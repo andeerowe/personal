@@ -1,6 +1,5 @@
 /* Mobile Styling */
 .main-container{
-    /* background-color: pink; */
     height: 16vh;
     font-family: 'Oswald', sans-serif;
 
@@ -36,7 +35,6 @@
     align-items: center;
 }
 #shop{
-    /* background-color: deeppink; */
     width: 50%;
     border: lightgray .05px solid;
     border-top: black .01px solid;
@@ -46,7 +44,6 @@
     align-items: center;
 }
 #discover{
-    /* background-color: salmon; */
     width: 50%;
     border: lightgray .05px solid;
     height: 100%;

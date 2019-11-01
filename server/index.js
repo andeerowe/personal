@@ -24,7 +24,10 @@ massive(CONNECTION_STRING).then(db => {
 const port = SERVER_PORT
 
 // Auth Endpoints
-
+app.post('/auth/login', authCtrl.login)
+app.post('/auth/register', authCtrl.register)
+app.post('/auth/logout', authCtrl.logout)
+app.get('/auth/getUser', authCtrl.getUser)
 // Main Endpoints
 
 app.get('/api/products', mainCtrl.getProducts)
