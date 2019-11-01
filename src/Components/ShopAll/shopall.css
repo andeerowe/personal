@@ -1,0 +1,61 @@
+#shopAll-page{
+    font-family: 'Oswald', sans-serif;
+}
+#products-container{
+    /* background-color: gold; */
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    width: 99vw;
+    flex-wrap: wrap;
+}
+#product-details {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+#shopAll-img-container{
+    background-image: url("https://www.capri-blue.com/img/product-types/candles.jpg");
+    background-size: cover;
+    position: relative;
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+}
+#shopAll-info{
+    box-sizing: border-box;
+    background-color: white;
+    width: 60%;
+    height: 50%;
+    position: absolute;
+    bottom: 0;
+    padding: 10px;
+    font-size: 14px;
+    font-family: 'PT Sans Narrow', sans-serif;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+#candles{
+    max-width: 45%;
+    /* height: 60%; */
+}
+#social-container {
+    /* background-color: orange; */
+    display: flex;
+    justify-content: space-around;
+    width: 200px;
+    margin-top:10px;
+}
+#shopall-menu{
+    border-bottom: .5px solid black;
+    border-top: .5px solid black;
+    height: 5vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}

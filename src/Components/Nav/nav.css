@@ -1,7 +1,7 @@
 /* Mobile Styling */
 .main-container{
     /* background-color: pink; */
-    height: 19vh;
+    height: 16vh;
     font-family: 'Oswald', sans-serif;
 
 }
@@ -11,18 +11,14 @@
     display: flex;
 }
 .logo-container{
-    background-image: url("../../photos/Coventry.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 150px;
-    /* background-color: red; */
     width: 40%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    height: 90%;
+    margin-left: 15px;
 }
 .right-side-container{
-    /* background-color: salmon; */
     width: 60%;
     display: flex;
     justify-content: space-evenly;
@@ -31,7 +27,6 @@
 #user-login-container{
     display: flex;
     justify-content: space-between;
-    /* background-color: yellow; */
     width: 75px;
 }
 .menu-container{
@@ -44,6 +39,7 @@
     /* background-color: deeppink; */
     width: 50%;
     border: lightgray .05px solid;
+    border-top: black .01px solid;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -57,4 +53,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+#top-logo{
+    width: 200px;
+    height: 90px;
 }

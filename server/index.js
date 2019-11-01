@@ -27,4 +27,6 @@ const port = SERVER_PORT
 
 // Main Endpoints
 
+app.get('/api/products', mainCtrl.getProducts)
+
 app.listen(port, () => {console.log(`Server running on port: ${port}`)})
