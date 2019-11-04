@@ -2,6 +2,9 @@ import React, {Component} from 'react'
 import axios from 'axios'
 import Product from '../Product/Product'
 import './shopall.css'
+// import {Link} from 'react-router-dom'
+import {selectProductId} from '../../ducks/reducer'
+import {connect} from 'react-redux'
 
 class ShopAll extends Component{
     constructor(){
@@ -24,6 +27,13 @@ componentDidMount = () => {
         // console.log(res.data)
     })
     .catch(err => console.log(err))
+}
+
+handleItemSelection = (productId) => {
+    console.log('handleItemSelection function fired')
+    console.log(productId)
+    this.props.selectProductId(productId)
+    this.props.history.push('/item')
 }
     render(){
 
@@ -51,21 +61,30 @@ componentDidMount = () => {
                 
             <div id="products-container">
                 
-                {this.state.products.map((e,i) => {
+                {this.state.products.map((element,i) => {
                     // console.log(e)
                     return (
-                    <Product
+                        <div key={i} onClick={() => this.handleItemSelection(element.product_id)}>
+                        <Product
                         key={i}
-                        product={e}
-                         />
+                        product={element}
+                            />
+                        </div>
+                    
                     )
                     
                     
                 })}
+                
             </div>
+            
             </div>
         )
     }
 }
 
-export default ShopAll
+const mapDispatchToProps = {
+    selectProductId
+}
+
+export default connect(null, mapDispatchToProps)(ShopAll)

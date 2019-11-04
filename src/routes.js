@@ -13,7 +13,7 @@ export default(
         <Route exact path='/' component={Landing}/>
         <Route exact path='/cart' component={Cart}/>
         <Route exact path='/products' component={ShopAll}/>
-        <Route exact path='/products/:id' component={Item}/>
+        <Route exact path='/item' component={Item}/>
         <Route exact path='/login' component={Login}/>
         <Route exact path='/register' component={Register}/>
     </Switch>
