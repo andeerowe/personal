@@ -1,0 +1,48 @@
+#register-img{
+    background-image: url("https://www.capri-blue.com/img/candle_jars.jpg");
+    background-size: cover;
+    position: relative;
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+}
+#register-info-box{
+    box-sizing: border-box;
+    background-color: white;
+    width: 60%;
+    height: 50%;
+    position: absolute;
+    bottom: 0;
+    padding: 10px;
+    font-size: 14px;
+    font-family: 'PT Sans Narrow', sans-serif;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+h4{
+    text-decoration: underline;
+}
+#extra-register-border{
+    background-color: black;
+    height: 52px;
+    width: 86px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+#register-inputs-container{
+    /* background-color: burlywood; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h3{
+    margin-bottom: 0px;
+}

@@ -49,6 +49,7 @@ module.exports = {
 
         let newUser = await db.register(email, hash, firstName, lastName)
         newUser = newUser[0]
+        console.log('newUser =', newUser)
         req.session.user = newUser
         res.status(200).send(req.session.user)
     },
@@ -59,9 +60,9 @@ module.exports = {
     },
     getUser: (req,res) => {
         if(req.session.user){
-            res.status(200).send(req.session.user)
+           return res.status(200).send(req.session.user)
         }
-        res.sendStatus(200)
+       return res.sendStatus(200)
     }
 
 }

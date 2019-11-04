@@ -6,5 +6,9 @@ module.exports = {
         let products = await db.get_products()
 
         res.status(200).send(products)
+        console.log(req.session)
+
+        
+        
     }
 }

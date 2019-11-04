@@ -2,6 +2,8 @@ import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
 import './login.css'
 import axios from 'axios'
+import {connect} from 'react-redux'
+import {updateUser} from '../../ducks/reducer'
 
 class Login extends Component{
     constructor(){
@@ -9,7 +11,10 @@ class Login extends Component{
 
         this.state ={
             email: 'Enter your email',
-            password: 'Enter your password'
+            password: 'Enter your password',
+            firstName: '',
+            lastName: '',
+            userId: 0
         }   
 }
 
@@ -34,6 +39,7 @@ handleLogin = () => {
             password: 'Enter your password'
         })
         // send res.data to redux through action function on this.props
+        this.props.updateUser(res.data)
         this.props.history.push('/')
     })
     .catch(err => console.log(err))
@@ -76,4 +82,8 @@ handleLogin = () => {
     }
 }
 
-export default Login
+const mapDispatchToProps = {
+    updateUser
+}
+
+export default connect(null, mapDispatchToProps)(Login)

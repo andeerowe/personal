@@ -36,22 +36,23 @@
     font-family: 'PT Sans Narrow', sans-serif;
     display:flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 
 }
 #candles{
-    max-width: 45%;
-    /* height: 60%; */
+    
+    max-width: 70%;
+    max-height: 50%;
+    
 }
 #social-container {
-    /* background-color: orange; */
     display: flex;
     justify-content: space-around;
     width: 200px;
     margin-top:10px;
 }
-#shopall-menu{
+#shopAll-menu{
     border-bottom: .5px solid black;
     border-top: .5px solid black;
     height: 5vh;

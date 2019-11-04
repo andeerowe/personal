@@ -21,7 +21,7 @@ componentDidMount = () => {
         this.setState({
             products: res.data
         })
-        console.log(res.data)
+        // console.log(res.data)
     })
     .catch(err => console.log(err))
 }
@@ -31,12 +31,11 @@ componentDidMount = () => {
             <div id="shopAll-page">
                 <div id="shopAll-img-container">
                     <section id="shopAll-info">
-                        Collections / Shop All
-                        <br />
+                        <div id="shopAll-path">Collections / Shop All</div>
+                        
+                        
                         <img id="candles" src="https://coventry-candles.s3.us-east-2.amazonaws.com/shopAllCandles.png" alt="candles"/>
-                        <br/>
-                        We all know candles are the original joy-sparkers. We have fragrences for you, your mom & your son's second-grade teacher so get to shopping!
-                        <br/>
+                        
                         <div id="social-container">
                             <i className="fab fa-instagram"></i>
                             <i className="fab fa-facebook-square"></i>
@@ -46,8 +45,8 @@ componentDidMount = () => {
 
                     </section>
                 </div>
-            <section id="shopall-menu">
-                menu thing
+            <section id="shopAll-menu">
+                
             </section>
                 
             <div id="products-container">

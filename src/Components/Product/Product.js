@@ -20,6 +20,7 @@ class Product extends Component {
                         <div id="product-name">
                             {this.props.product.name}
                         </div>
+                        
                         <div>
                             <b>${this.props.product.price}.00</b>
                         </div>
