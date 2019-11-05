@@ -34,5 +34,7 @@ app.get('/auth/getUser', authCtrl.getUser)
 // Main Endpoints
 app.get('/api/products', mainCtrl.getProducts)
 app.get('/api/item/:id', mainCtrl.getSpecificProduct)
+app.post('/api/cart', mainCtrl.addToCart)
+app.get('/api/cart', mainCtrl.getCart)
 
 app.listen(port, () => {console.log(`Server running on port: ${port}`)})

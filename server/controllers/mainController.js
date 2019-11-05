@@ -17,5 +17,34 @@ module.exports = {
         // console.log(product)
         
         res.status(200).send(product)
+    },
+    addToCart: (req, res) => {
+        console.log('add to cart backend function hit')
+        const {name, collection, size, price, scent, description, img, quantity} = req.body
+        
+        let item = {
+            name,
+            collection, 
+            size,
+            price,
+            scent,
+            description,
+            img,
+            quantity
+        }
+        if (!req.session.cart){
+            req.session.cart = []
+        }
+        
+        req.session.cart.push(item)
+        console.log(req.session.cart)
+        res.status(200).send(req.session.cart)
+
+    },
+    getCart: (req,res) => {
+        if(req.session.cart){
+            return res.status(200).send(req.session.cart)
+        }
+        return res.sendStatus(200)
     }
 }

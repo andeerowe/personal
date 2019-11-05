@@ -21,8 +21,8 @@ class Nav extends Component{
         
     }
     render(){
-        console.log(`this.props = ${this.props}`)
-        if(this.props.user.user_id === undefined){
+        console.log(this.props.user.user_id)
+        if(!this.props.user.user_id){
             return(
                 // IF NO SESSION.USER EXISTS
                 <nav className="main-container">
@@ -102,7 +102,7 @@ class Nav extends Component{
                                 </div>
                                 
                                
-                                        <Link to='./login'>
+                                        <Link to="/user">
                                             <div id="login">
                                                 {`${this.props.user.first_name} ${this.props.user.last_name}`}
                                                 

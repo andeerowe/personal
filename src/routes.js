@@ -7,6 +7,7 @@ import Landing from './Components/Landing/Landing'
 import Login from './Components/Login/Login'
 import Register from './Components/Register/Register'
 import ShopAll from './Components/ShopAll/ShopAll'
+import User from './Components/User/User'
 
 export default(
     <Switch>
@@ -16,5 +17,6 @@ export default(
         <Route exact path='/item' component={Item}/>
         <Route exact path='/login' component={Login}/>
         <Route exact path='/register' component={Register}/>
+        <Route exact path='/user' component={User} />
     </Switch>
 )

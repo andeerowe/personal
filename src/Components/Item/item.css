@@ -1,5 +1,75 @@
+#item-container{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-family: 'Oswald', sans-serif;
+}
 #product-img{
     margin: 15px;
     box-sizing: border-box;
     width: 350px;
+}
+
+select{
+    background-color: rgb(187, 219, 230);
+    border-radius: 0px;
+    font-size: 30px;
+}
+#border-add-to-cart{
+    background-color:black;
+    height: 55px;
+    width: 105px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#options-box{
+    background-color: rgb(180, 89, 104);
+    height: 130px;
+    width: 100%;
+    display:flex;
+    /* flex-direction: column; */
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+}
+#quantity-container{
+    display:flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+#item-collection{
+    text-decoration: underline;
+}
+#item-info-container{
+    padding-left: 20px;
+    margin-bottom: 20px;
+    display:flex;
+    flex-direction:column;
+    align-items: flex-start;
+}
+h1{
+    margin-bottom: 0px;
+}
+#spacer{
+    border-top: solid black .5px;
+    /* height: 15px; */
+    width: 97%;
+    padding: 10px;
+    margin-bottom: 20px;
+    /* background-color: teal; */
+
+}
+#underline-img{
+    height: 15px;
+    width: 100px;
+    /* margin-top: -40px; */
+}
+h5{
+    margin-bottom: 0px;
+}
+#back-to-shopping{
+    text-decoration: underline;
 }
