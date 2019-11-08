@@ -15,3 +15,38 @@
 #placeholder{
     color:white;
 }
+#start-shopping{
+    text-decoration: underline;
+}
+#total-container{
+    /* background-color: orange; */
+    width: 85%;
+    border: 1px black solid;
+    font-family: 'Oswald', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+
+}
+.container{
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.underline-me{
+
+    border-bottom: .5px grey solid;
+    padding-bottom: 10px;
+    width: 80%;
+}
+h2{
+    margin: 10px;
+}
+#free-shipping{
+    color: darkgreen
+}

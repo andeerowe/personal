@@ -5,6 +5,7 @@ import './item.css'
 import {Link} from 'react-router-dom'
 import {updateCart} from '../../ducks/reducer'
 
+
 class Item extends Component{
     constructor(){
         super()
@@ -17,7 +18,8 @@ class Item extends Component{
             scent: '',
             description: '',
             img: '',
-            quantity: 1
+            quantity: 1,
+            product_id: 0
         }   
 }
 
@@ -32,9 +34,10 @@ componentDidMount = () => {
             scent: res.data.scent,
             description: res.data.description,
             img: res.data.img,
-            quantity: this.state.quantity
+            product_id: res.data.product_id
+            // quantity: this.state.quantity
         })
-        console.log(this.state.scent)
+        // console.log(this.state.scent)
     })
     .catch(err => console.log(err))
 }
@@ -47,11 +50,13 @@ handleAddToCart = () => {
         scent: this.state.scent,
         description: this.state.description,
         img: this.state.img,
-        quantity: this.state.quantity
+        quantity: this.state.quantity,
+        product_id: this.state.product_id
     })
     .then(res => {
         console.log('then hit', res.data)
         this.props.updateCart(res.data)
+        // alert('Item was successfully added to your cart')
     })
     .catch(err => console.log(err))
 }
@@ -62,7 +67,8 @@ handleQuantityChange = (value) => {
     })
 }
     render(){
-        console.log(this.props)
+        // console.log(this.props)
+        // console.log(this.state.quantity)
         return(
             <div id="item-container">
                 <img id="product-img" src={this.state.img} alt="product"/>
@@ -74,7 +80,7 @@ handleQuantityChange = (value) => {
                 <div id="options-box">
                     <section id="quantity-container">
                         QUANTITY
-                        <select onChange={(e) => console.log(e.target.value)}> 
+                        <select onChange={(e) => this.handleQuantityChange(e.target.value)}> 
                             <option value="1" >1</option>
                             <option value="2" >2</option>
                             <option value="3" >3</option>
@@ -83,7 +89,7 @@ handleQuantityChange = (value) => {
                         </select> 
                     </section>
                     <div id="border-add-to-cart">
-                        <button onClick={() => this.handleAddToCart()}>Add to Bag</button>
+                        <button id="add-to-cart-button" onClick={() => this.handleAddToCart()}>Add to Bag</button>
                     </div>
                 </div>
                 <div id="spacer">

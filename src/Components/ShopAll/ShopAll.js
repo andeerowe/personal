@@ -30,8 +30,8 @@ componentDidMount = () => {
 }
 
 handleItemSelection = (productId) => {
-    console.log('handleItemSelection function fired')
-    console.log(productId)
+    // console.log('handleItemSelection function fired')
+    // console.log(productId)
     this.props.selectProductId(productId)
     this.props.history.push('/item')
 }

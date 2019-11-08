@@ -21,7 +21,7 @@ class Nav extends Component{
         
     }
     render(){
-        console.log(this.props.user.user_id)
+        // console.log(this.props.user.user_id)
         if(!this.props.user.user_id){
             return(
                 // IF NO SESSION.USER EXISTS
@@ -104,7 +104,7 @@ class Nav extends Component{
                                
                                         <Link to="/user">
                                             <div id="login">
-                                                {`${this.props.user.first_name} ${this.props.user.last_name}`}
+                                                {`${this.props.user.first_name.toUpperCase()} ${this.props.user.last_name.toUpperCase()}`}
                                                 
                                                 
                                             </div>

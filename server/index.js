@@ -36,5 +36,7 @@ app.get('/api/products', mainCtrl.getProducts)
 app.get('/api/item/:id', mainCtrl.getSpecificProduct)
 app.post('/api/cart', mainCtrl.addToCart)
 app.get('/api/cart', mainCtrl.getCart)
+app.put('/api/cart', mainCtrl.updateCart)
+app.delete('/api/cart/:id', mainCtrl.deleteItem)
 
 app.listen(port, () => {console.log(`Server running on port: ${port}`)})

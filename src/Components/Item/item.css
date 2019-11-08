@@ -24,6 +24,9 @@ select{
     justify-content: center;
     align-items: center;
 }
+#add-to-cart-button:hover{
+    color: pink;
+}
 #options-box{
     background-color: rgb(180, 89, 104);
     height: 130px;
