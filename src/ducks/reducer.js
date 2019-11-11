@@ -30,7 +30,7 @@ export function selectProductId (productId){
 }
 
 export function updateCart (newCart){
-    // console.log('cart action function hit')
+    console.log('cart action function hit')
     return {
         type: UPDATE_CART,
         payload: newCart

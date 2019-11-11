@@ -73,5 +73,10 @@ module.exports = {
             
         }
         res.status(200).send(req.session.cart)
+    },
+    clearCart: (req, res) => {
+        console.log('clearcart', req.session)
+        req.session.cart = []
+        res.sendStatus(200)
     }
 }

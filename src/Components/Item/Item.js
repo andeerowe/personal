@@ -4,6 +4,7 @@ import axios from 'axios'
 import './item.css'
 import {Link} from 'react-router-dom'
 import {updateCart} from '../../ducks/reducer'
+const Swal = require('sweetalert2')
 
 
 class Item extends Component{
@@ -57,6 +58,12 @@ handleAddToCart = () => {
         console.log('then hit', res.data)
         this.props.updateCart(res.data)
         // alert('Item was successfully added to your cart')
+        Swal.fire({
+            title: `${this.state.name}`,
+            text: 'was successfully added to your bag',
+            icon: 'success',
+            confirmButtonText: 'OKAY'
+          })
     })
     .catch(err => console.log(err))
 }

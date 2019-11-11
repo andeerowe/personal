@@ -2,10 +2,12 @@ require('dotenv').config()
 const express = require('express')
 const massive = require('massive')
 const session = require('express-session')
-const {CONNECTION_STRING, SERVER_PORT, SESSION_SECRET, AWSSecretKey} = process.env
+const {CONNECTION_STRING, SERVER_PORT, SESSION_SECRET} = process.env
 const app = express()
 const authCtrl = require('./controllers/authController')
 const mainCtrl = require('./controllers/mainController')
+// const stripeCtrl = require('./controllers/stripeController')
+// const stripe = require("stripe")(STRIPE_KEY)
 
 
 // aws.config, require aws - sdk
@@ -38,5 +40,11 @@ app.post('/api/cart', mainCtrl.addToCart)
 app.get('/api/cart', mainCtrl.getCart)
 app.put('/api/cart', mainCtrl.updateCart)
 app.delete('/api/cart/:id', mainCtrl.deleteItem)
+app.delete('/api/checkout', mainCtrl.clearCart)
+
+// Stripe Endpoint
+app.post('/checkout', (req,res) => {
+    res.sendStatus(200)
+})
 
 app.listen(port, () => {console.log(`Server running on port: ${port}`)})
