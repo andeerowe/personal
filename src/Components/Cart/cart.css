@@ -37,7 +37,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 }
+
 .underline-me{
 
     border-bottom: .5px grey solid;
@@ -49,4 +51,10 @@ h2{
 }
 #free-shipping{
     color: darkgreen
+}
+
+@media (min-width: 940px){
+    #empty-bag-img {
+        max-width: 70%
+    }
 }

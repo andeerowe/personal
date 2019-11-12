@@ -1,73 +1,223 @@
-/* Mobile Styling */
-.main-container{
-    height: 16vh;
-    font-family: 'Oswald', sans-serif;
-
-}
-.top-nav-container{
-    border-bottom: black .05px solid;
-    height: 62%;
-    display: flex;
-}
-.logo-container{
-    width: 40%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    height: 90%;
-    margin-top: 10px;
-    margin-left: 15px;
+@media (max-width: 450px){
+    .nav-desktop-style{
+        display: none;
+    }
+    .main-container{
+        height: 16vh;
+        font-family: 'Oswald', sans-serif;
     
+    }
+    .top-nav-container{
+        border-bottom: black .05px solid;
+        /* height: 62%; */
+        height: 10vh;
+        display: flex;
+        /* background-color: teal; */
+    }
+    .logo-container{
+        width: 40%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: 90%;
+        margin-top: 10px;
+        margin-left: 15px;
+        
+    }
+    .right-side-container{
+        width: 60%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        /* background-color: red; */
+    }
+    #user-login-container{
+        display: flex;
+        justify-content: space-between;
+        width: 90px;
+    }
+    .menu-container{
+        /* height: 38%; */
+        height: 6vh;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        /* background-color: pink; */
+    }
+    #shop{
+        width: 50%;
+        border: lightgray .05px solid;
+        border-top: black .01px solid;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #discover{
+        width: 50%;
+        border: lightgray .05px solid;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    a {
+        text-decoration: none;
+        color: black;
+    }
+    #top-logo{
+        /* background-color: red; */
+        height: 60px;
+        width: 140px;
+    }
+    #login{
+        /* background-color:orange; */
+        width: 80px;
+        font-size: 16px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        padding-left: 5px;
+    }
 }
-.right-side-container{
-    width: 60%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+@media(min-width: 450px){
+    #top-logo{
+        /* background-color: red; */
+        height: 50px;
+        width: 130px;
+    }
+    .nav-desktop-style{
+        display: none;
+    }
+    .main-container{
+        height: 16vh;
+        font-family: 'Oswald', sans-serif;
+    
+    }
+    .top-nav-container{
+        border-bottom: black .05px solid;
+        /* height: 62%; */
+        height: 10vh;
+        display: flex;
+        /* background-color: teal; */
+    }
+    .logo-container{
+        width: 40%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: 90%;
+        margin-top: 10px;
+        margin-left: 15px;
+        
+    }
+    .right-side-container{
+        width: 60%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        /* background-color: red; */
+    }
+    #user-login-container{
+        display: flex;
+        justify-content: space-between;
+        width: 90px;
+    }
+    .menu-container{
+        /* height: 38%; */
+        height: 6vh;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        /* background-color: pink; */
+    }
+    #shop{
+        width: 50%;
+        border: lightgray .05px solid;
+        border-top: black .01px solid;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #discover{
+        width: 50%;
+        border: lightgray .05px solid;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    a {
+        text-decoration: none;
+        color: black;
+    }
+    #login{
+        /* background-color:orange; */
+        width: 80px;
+        font-size: 16px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        padding-left: 5px;
+    }
 }
-#user-login-container{
-    display: flex;
-    justify-content: space-between;
-    width: 75px;
-}
-.menu-container{
-    height: 38%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-#shop{
-    width: 50%;
-    border: lightgray .05px solid;
-    border-top: black .01px solid;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-#discover{
-    width: 50%;
-    border: lightgray .05px solid;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-a {
-    text-decoration: none;
-    color: black;
-}
-#top-logo{
-    background-color: red;
-    height: 60px;
-    width: 140px;
-}
-#login{
-    /* background-color:orange; */
-    width: 80px;
-    font-size: 16px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    padding-left: 5px;
+@media(min-width: 675px){
+    .nav-mobile-style{
+        display: none;
+    }
+    .main-container{
+        height: 16vh;
+        font-family: 'Oswald', sans-serif;
+        
+        /* background-color: darkseagreen; */
+        
+        
+    }
+    .nav-desktop-style{
+        /* background-color: orange; */
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border-bottom: lightgray .05px solid;
+    }
+    #desktop-nav-left{
+        /* background-color: pink; */
+        width: 33%;
+        display: flex;
+        justify-content: space-around;
+    }
+    /* #desktop-nav-center{
+        background-color: deeppink;
+    } */
+    #top-logo{
+        /* background-color: red; */
+        height: 90px;
+        width: 175px;
+    }
+    #desktop-nav-right{
+        width: 33%;
+        /* background-color: salmon; */
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    #user-login-container{
+        display: flex;
+        justify-content: space-between;
+        width: 75px;
+        
+    }
+    #login{
+        /* background-color: teal; */
+        width: 100px;
+        display: flex;
+        margin-left: 5px;
+    }
+    a {
+        text-decoration: none;
+        color: black;
+    }
 }

@@ -78,12 +78,34 @@ handleQuantityChange = (value) => {
         // console.log(this.state.quantity)
         return(
             <div id="item-container">
-                <img id="product-img" src={this.state.img} alt="product"/>
+                <div id="product-img-container">
+                    <div id="img-border">
+                    <img id="product-img" src={this.state.img} alt="product"/>
+                    </div>
+                
+                
+                
                 <div id="item-info-container">
                     <h1>{this.state.name}, {this.state.size}</h1>
                     <h3 id="item-collection">{this.state.collection} Collection</h3>
                     <h3>${this.state.price}.00</h3>
+                    <br/>
+                    <section id="desktop-options-box">
+                        QUANTITY:
+                        <select onChange={(e) => this.handleQuantityChange(e.target.value)}> 
+                            <option value="1" >1</option>
+                            <option value="2" >2</option>
+                            <option value="3" >3</option>
+                            <option value="4" >4</option>
+                            <option value="5" >5</option>
+                        </select> 
+                        <div id="border-add-to-cart">
+                        <button id="add-to-cart-button" onClick={() => this.handleAddToCart()}>Add to Bag</button>
+                        </div>
+                        
+                    </section>
                 </div>
+                
                 <div id="options-box">
                     <section id="quantity-container">
                         QUANTITY
@@ -98,6 +120,7 @@ handleQuantityChange = (value) => {
                     <div id="border-add-to-cart">
                         <button id="add-to-cart-button" onClick={() => this.handleAddToCart()}>Add to Bag</button>
                     </div>
+                </div>
                 </div>
                 <div id="spacer">
                     <h5>ITEM DETAILS</h5>

@@ -11,4 +11,27 @@
     #mobile-img-container{
         display:none;
     }
+    .square-img{
+        margin-bottom: 70px;
+        margin-top: 30px;
+        max-width: 50%;
+    }
+}
+@media(min-width: 1350px){
+    #mobile-img-container{
+        display:none;
+    }
+    #banner-img{
+        max-width: 85%;
+    }
+    #landing-img-container{
+        width: 85vw;
+        /* background-color: red; */
+        padding: 50px;
+    }
+    .square-img{
+        margin: 30px 40px 70px 40px;
+        max-width: 35%;
+        
+    }
 }

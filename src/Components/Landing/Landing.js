@@ -10,8 +10,12 @@ export default function Landing (){
                 <img src="https://coventry-candles.s3.us-east-2.amazonaws.com/S+E+E+W+H+A+T+'+S+N+E+W.png"/>
             </div>
             <div id="desktop-img-container">
-                <img src="https://coventry-candles.s3.us-east-2.amazonaws.com/Last+Call!.png"/>
-                <img src="https://coventry-candles.s3.us-east-2.amazonaws.com/S+P+O+T+L+I+G+H+T.png" />
+                <img id="banner-img" src="https://coventry-candles.s3.us-east-2.amazonaws.com/Last+Call!.png"/>
+                <div id="lading-img-container">
+                <img className="square-img" src="https://coventry-candles.s3.us-east-2.amazonaws.com/S+P+O+T+L+I+G+H+T.png" />
+                <img className="square-img" src="https://coventry-candles.s3.us-east-2.amazonaws.com/S+E+E+W+H+A+T+'+S+N+E+W.png"/>
+                </div>
+                
             </div>
         </div>
     )

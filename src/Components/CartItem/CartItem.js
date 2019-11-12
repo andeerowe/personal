@@ -53,6 +53,7 @@ deleteItem = () => {
                     <button id="x-button" onClick={() => this.deleteItem()}> X </button>
                     <div>
                         QUANTITY
+                        <br />
                         <select onChange={(e) => this.updateQuantity(e.target.value)}>
                             <option> {this.props.candle.quantity} </option>
                             <option> 1 </option>

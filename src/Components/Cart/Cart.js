@@ -81,7 +81,8 @@ calculateTotal = () => {
         console.log('this.props.cart', this.props.cart)
         // console.log(this.props.cart)
         // this.calculateTotal()
-        let tax = this.state.total * 0.08
+        let num = this.state.total * 0.08
+        let tax = num.toFixed(2)
         if(this.props.cart === "OK" || !this.props.cart[0]){
             console.log('hit first render')
             return(
@@ -90,7 +91,7 @@ calculateTotal = () => {
                     <br />
                     <div id="cart-title">YOUR SHOPPING BAG <div id="placeholder">a </div> <i className="far fa-smile"></i></div>
                     <Link id="start-shopping" to="/products"> 
-                    <img src="https://coventry-candles.s3.us-east-2.amazonaws.com/YOUR+BAG+IS+EMPTY.png" alt="broke"/>
+                    <img id="empty-bag-img" src="https://coventry-candles.s3.us-east-2.amazonaws.com/YOUR+BAG+IS+EMPTY.png" alt="broke"/>
                     </Link>
                     
                 </div>
@@ -104,11 +105,13 @@ calculateTotal = () => {
                 {this.props.cart[0] ? (
                     <div className="container">{this.props.cart.map((e,i) => {
                         return (
-                            <CartItem 
+                            <div id="mapped-item-container">
+                                <CartItem 
                                 calculateTotal={this.calculateTotal}
                                 key={i}
                                 candle={e}
                                 />
+                            </div>
                         )
                     })} 
                    <div id="total-container">
@@ -122,13 +125,13 @@ calculateTotal = () => {
                        <h3>SHIPPING: $0.00</h3>
                        <h3 className="underline-me"> ESTIMATED TAXES: ${tax}</h3>
                        <h2>ORDER TOTAL :</h2>
-                       <h2>${this.state.total + tax}</h2>
+                       <h2>${this.state.total + num}</h2>
                        <StripeCheckout 
                         stripeKey="pk_test_nQNj2a2l3mUcP32v4fKDKP5w00L4WSJzqs"
                         token={this.handleToken}
                         // billingAddress
                         // shippingAddress
-                        amount={(this.state.total + tax) * 100}
+                        amount={(this.state.total + num) * 100}
                         name="Coventry Candle Purchase"
 
                     />

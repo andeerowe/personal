@@ -26,59 +26,99 @@ class Nav extends Component{
             return(
                 // IF NO SESSION.USER EXISTS
                 <nav className="main-container">
+                    <div className="nav-mobile-style">
                     <div className="top-nav-container">
                         
-                            <div className="logo-container">
-                                 <Link to="/">
-                                 <img id="top-logo" src="https://coventry-candles.s3.us-east-2.amazonaws.com/logo114.png" alt="logo"/>    
-                                </Link> 
-                            </div>
-                        
-                        <div className="right-side-container">
-                            <section id="user-login-container">
-                                <div>
-                                <i className="fas fa-user-circle fa-lg"></i>
-                                </div>
-                                
-                               
-                                        <Link to='./login'>
-                                            <div id="login">
-                                                LOGIN
-                                            </div>
-                                        </Link>
-                                
-                                
-                                
-                                
-                             </section>
-                             
-                            <section>
-                                <i className="fas fa-search fa-lg"></i>
-                            </section>
-                            <section>
-                                <Link to="/cart">
-                                    <i className="fas fa-shopping-bag fa-lg"></i>
-                                </Link>
-                                
-                            </section>
+                        <div className="logo-container">
+                             <Link to="/">
+                             <img id="top-logo" src="https://coventry-candles.s3.us-east-2.amazonaws.com/logo114.png" alt="logo"/>    
+                            </Link> 
                         </div>
-                    </div>
                     
-                    <div className="menu-container">
-                        
-                        <section id='shop'>
-                            <Link to="/products">
-                                SHOP
+                    <div className="right-side-container">
+                        <section id="user-login-container">
+                            <div>
+                            <i className="fas fa-user-circle fa-lg"></i>
+                            </div>
+                            
+                           
+                                    <Link to='./login'>
+                                        <div id="login">
+                                            LOGIN
+                                        </div>
+                                    </Link>
+                            
+                            
+                            
+                            
+                         </section>
+                         
+                        <section>
+                            <i className="fas fa-search fa-lg"></i>
+                        </section>
+                        <section>
+                            <Link to="/cart">
+                                <i className="fas fa-shopping-bag fa-lg"></i>
+                            </Link>
+                            
+                        </section>
+                    </div>
+                </div>
+                
+                <div className="menu-container">
+                    
+                    <section id='shop'>
+                        <Link to="/products">
+                            SHOP
+                        </Link>
+                    </section>
+                    
+                    
+                        <section id='discover'>
+                            <Link to="/">
+                                DISCOVER
                             </Link>
                         </section>
+                    
+                </div>
+                    </div>
+                    <div className="nav-desktop-style">
                         
-                        
-                            <section id='discover'>
-                                <Link to="/">
-                                    DISCOVER
-                                </Link>
-                            </section>
-                        
+                        <div id="desktop-nav-left">
+                        <Link to="/products">
+                            SHOP
+                        </Link>
+                        <Link to="/">
+                                DISCOVER
+                            </Link>
+                        </div>
+                        <div id="desktop-nav-center">
+                            <Link to="/">
+                                <img id="top-logo" src="https://coventry-candles.s3.us-east-2.amazonaws.com/logo114.png" alt="logo"/>    
+                            </Link> 
+                        </div>
+                        <div id="desktop-nav-right">
+                        {/* ICONS */}
+                        <section id="user-login-container">
+                            {/* <div>
+                            <i className="fas fa-user-circle fa-lg"></i>
+                            </div> */}
+                            <Link to='./login'>
+                                <div id="login">
+                                LOGIN
+                                </div>
+                            </Link>  
+                         </section>
+                         <section>
+                            <i className="fas fa-search fa-lg"></i>
+                        </section>
+                        <section>
+                            <Link to="/cart">
+                                <i className="fas fa-shopping-bag fa-lg"></i>
+                            </Link>
+                            
+                        </section>
+                        </div>
                     </div>
                 </nav>
             )
@@ -86,63 +126,102 @@ class Nav extends Component{
             return(
                 // IF A SESSION.USER DOES EXIST
                 <nav className="main-container">
+                    <div className="nav-mobile-style">
                     <div className="top-nav-container">
                         
-                            <div className="logo-container">
-                                <Link to="/">
-                                    <img id="top-logo" src="https://coventry-candles.s3.us-east-2.amazonaws.com/logo114.png" alt="logo"/> 
-                                    
-                                </Link> 
-                            </div>
-                        
-                        <div className="right-side-container">
-                            <section id="user-login-container">
-                                <div>
-                                <i className="fas fa-user-circle fa-lg"></i>
-                                </div>
+                        <div className="logo-container">
+                            <Link to="/">
+                                <img id="top-logo" src="https://coventry-candles.s3.us-east-2.amazonaws.com/logo114.png" alt="logo"/> 
                                 
-                               
-                                        <Link to="/user">
-                                            <div id="login">
-                                                {`${this.props.user.first_name.toUpperCase()} ${this.props.user.last_name.toUpperCase()}`}
-                                                
-                                                
-                                            </div>
-                                        </Link>
-                                
-                                
-                                
-                                
-                             </section>
-                             
-                            <section>
-                                <i className="fas fa-search fa-lg"></i>
-                            </section>
-                            <section>
-                                <Link to="/cart">
-                                    <i className="fas fa-shopping-bag fa-lg"></i>
-                                </Link>
-                                
-                            </section>
+                            </Link> 
                         </div>
-                    </div>
                     
-                    <div className="menu-container">
-                        
-                        <section id='shop'>
-                            <Link to="/products">
-                                SHOP
+                    <div className="right-side-container">
+                        <section id="user-login-container">
+                            <div>
+                            <i className="fas fa-user-circle fa-lg"></i>
+                            </div>
+                            
+                           
+                                    <Link to="/user">
+                                        <div id="login">
+                                            {`${this.props.user.first_name.toUpperCase()} ${this.props.user.last_name.toUpperCase()}`}
+                                            
+                                            
+                                        </div>
+                                    </Link>
+                            
+                            
+                            
+                            
+                         </section>
+                         
+                        <section>
+                            <i className="fas fa-search fa-lg"></i>
+                        </section>
+                        <section>
+                            <Link to="/cart">
+                                <i className="fas fa-shopping-bag fa-lg"></i>
+                            </Link>
+                            
+                        </section>
+                    </div>
+                </div>
+                
+                <div className="menu-container">
+                    
+                    <section id='shop'>
+                        <Link to="/products">
+                            SHOP
+                        </Link>
+                    </section>
+                    
+                    
+                        <section id='discover'>
+                            <Link to="/">
+                                DISCOVER
                             </Link>
                         </section>
-                        
-                        
-                            <section id='discover'>
-                                <Link to="/">
-                                    DISCOVER
-                                </Link>
-                            </section>
-                        
+                    
+                </div>
                     </div>
+                    <div className="nav-desktop-style">
+                    <div id="desktop-nav-left">
+                        <Link to="/products">
+                            SHOP
+                        </Link>
+                        <Link to="/">
+                                DISCOVER
+                            </Link>
+                        </div>
+                        <div id="desktop-nav-center">
+                            <Link to="/">
+                                <img id="top-logo" src="https://coventry-candles.s3.us-east-2.amazonaws.com/logo114.png" alt="logo"/>    
+                            </Link> 
+                        </div>
+                        <div id="desktop-nav-right">
+                    <section id="user-login-container">
+                            <div>
+                            <i className="fas fa-user-circle fa-lg"></i>
+                            </div>
+                            <Link to='/user'>
+                                <div id="login">
+                                {`${this.props.user.first_name.toUpperCase()} ${this.props.user.last_name.toUpperCase()}`}
+                                </div>
+                            </Link>  
+                         </section>
+                         <section>
+                            <i className="fas fa-search fa-lg"></i>
+                        </section>
+                        <section>
+                            <Link to="/cart">
+                                <i className="fas fa-shopping-bag fa-lg"></i>
+                            </Link>
+                            
+                        </section>
+                        </div>
+                        </div>
+                    
                 </nav>
             )
         }
